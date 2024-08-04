@@ -1,19 +1,29 @@
+**Starting docker locally**
 systemctl start docker
 
-docker ps // lists all the running containers
-docker image ls // list of all the images that we have in our system
+**Lists all the running containers**
+docker ps
 
-docker stop container-name(or id) // to stop the container
+**List of all the images that we have in our system**
+docker image ls
 
-docker volume ls //list of all the volumes
+**To stop the container**
+docker stop container-name(or id)
 
-docker logs container-name //logs of all the container
+**list of all the volumes**
+docker volume ls
 
-docker container prune //delete all the stopped containers
+**Logs of all the container**
+docker logs container-name
 
-docker network ls //lists all the networks available
+**Delete all the stopped containers**
+docker container prune
 
-docker network create xyz //creating a required network which can be used for inter container communications
+**Lists all the networks available**
+docker network ls
+
+**Creating a required network which can be used for inter container communications**
+docker network create xyz
 
 **Getting Containers Up**
 docker-compose -f docker-compose.yaml up
