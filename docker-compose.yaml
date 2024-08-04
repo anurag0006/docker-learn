@@ -1,4 +1,4 @@
-version: "3"
+version: "3.7"
 
 services:
   mongodb:
@@ -8,6 +8,8 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password
+    volumes:
+      - mymongo-data:/data/db
 
   mongo-express:
     image: mongo-express
@@ -22,3 +24,7 @@ services:
       - ME_CONFIG_MONGODB_SERVER=mongodb
     depends_on:
       - mongodb
+
+volumes:
+  mymongo-data:
+    driver: local
